@@ -1,0 +1,23 @@
+package parse
+
+import Record
+import exceptions.RecordParseException
+
+class CommaParser {
+
+    companion object: Parser {
+
+        override fun canParse(line: String): Boolean {
+            return line.contains(",")
+        }
+
+        override fun parseLine(line: String): Record {
+            try {
+                val recordValues = line.split(",")
+                return Record(recordValues[0], recordValues[1], recordValues[2], recordValues[3], recordValues[4])
+            } catch(e: Exception) {
+                throw RecordParseException()
+            }
+        }
+    }
+}
