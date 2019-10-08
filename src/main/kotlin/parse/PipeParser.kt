@@ -1,6 +1,6 @@
 package parse
 
-import Record
+import storage.Record
 import exceptions.RecordParseException
 
 class PipeParser {
@@ -19,7 +19,13 @@ class PipeParser {
                 //trim whitespace from values
                 recordValues = recordValues.map {it.trim()}
 
-                return Record(recordValues[0], recordValues[1], recordValues[2], recordValues[3], recordValues[4])
+                return Record(
+                    recordValues[0],
+                    recordValues[1],
+                    recordValues[2],
+                    recordValues[3],
+                    recordValues[4]
+                )
             } catch(e: Exception) {
                 throw RecordParseException()
             }

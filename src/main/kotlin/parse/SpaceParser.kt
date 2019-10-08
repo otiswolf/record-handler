@@ -1,6 +1,6 @@
 package parse
 
-import Record
+import storage.Record
 import exceptions.RecordParseException
 
 class SpaceParser {
@@ -16,7 +16,13 @@ class SpaceParser {
                 //capture values in between delimiters
                 val recordValues = line.split(" ")
 
-                return Record(recordValues[0], recordValues[1], recordValues[2], recordValues[3], recordValues[4])
+                return Record(
+                    recordValues[0],
+                    recordValues[1],
+                    recordValues[2],
+                    recordValues[3],
+                    recordValues[4]
+                )
             } catch(e: Exception) {
                 throw RecordParseException()
             }

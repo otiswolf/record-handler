@@ -3,7 +3,7 @@ package parse
 import exceptions.RecordParseException
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
-import Record
+import storage.Record
 
 internal class SpaceParserTest {
     val validLine = "Wolf Otis Male Green 11-07-1996"

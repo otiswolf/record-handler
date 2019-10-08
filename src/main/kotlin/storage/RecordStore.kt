@@ -1,3 +1,7 @@
+package storage
+
+import storage.Record
+
 interface RecordStore {
     val records: List<Record>
 

@@ -2,7 +2,7 @@ package parse
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
-import Record
+import storage.Record
 import exceptions.RecordParseException
 
 internal class PipeParserTest {

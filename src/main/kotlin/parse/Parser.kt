@@ -1,6 +1,6 @@
 package parse
 
-import Record
+import storage.Record
 
 interface Parser {
     fun canParse(line: String): Boolean
