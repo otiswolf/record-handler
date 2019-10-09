@@ -4,12 +4,13 @@ import exceptions.RecordParseException
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import storage.Record
+import java.time.LocalDate
 
 internal class CommaParserTest {
     val validLine = "Wolf, Otis, Male, Green, 11-07-1996"
     val invalidLine = "This is not valid"
 
-    val exampleRecord = Record("Wolf", "Otis", "Male", "Green", "11-07-1996")
+    val exampleRecord = Record("Wolf", "Otis", "Male", "Green", LocalDate.parse("1996-11-07"))
 
     @Test
     fun `test canParse returns true when given valid line`() {

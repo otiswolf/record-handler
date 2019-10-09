@@ -2,6 +2,8 @@ package parse
 
 import storage.Record
 import exceptions.RecordParseException
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class CommaParser {
 
@@ -19,12 +21,15 @@ class CommaParser {
                 //trim whitespace from values
                 recordValues = recordValues.map {it.trim()}
 
+                //set format for parsing date
+                var formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy")
+
                 return Record(
                     recordValues[0],
                     recordValues[1],
                     recordValues[2],
                     recordValues[3],
-                    recordValues[4]
+                    LocalDate.parse(recordValues[4], formatter)
                 )
             } catch(e: Exception) {
                 throw RecordParseException()

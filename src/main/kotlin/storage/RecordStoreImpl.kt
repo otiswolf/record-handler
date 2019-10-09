@@ -8,17 +8,17 @@ class RecordStoreImpl: RecordStore {
     }
 
     override fun sortByGenderAndLastName(): List<Record> {
-//        records.sortWith(compareBy({it.Gender}, {it.LastName}))
-//        return records
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        records.sortWith(compareBy({it.Gender}, {it.LastName}))
+        return records
     }
 
     override fun sotrByBirthday(): List<Record> {
-//        records.sortBy {it.DateOfBirth}
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        records.sortBy {it.DateOfBirth}
+        return records
     }
 
     override fun sortByLastname(): List<Record> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        records.sortBy {it.LastName}
+        return records
     }
 }
