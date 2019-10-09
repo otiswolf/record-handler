@@ -9,7 +9,7 @@ interface RecordStore {
 
     fun sortByGenderAndLastName(): List<Record>
 
-    fun sotrByBirthday(): List<Record>
+    fun sortByBirthday(): List<Record>
 
     fun sortByLastname(): List<Record>
 }

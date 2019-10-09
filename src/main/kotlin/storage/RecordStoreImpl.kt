@@ -12,13 +12,13 @@ class RecordStoreImpl: RecordStore {
         return records
     }
 
-    override fun sotrByBirthday(): List<Record> {
+    override fun sortByBirthday(): List<Record> {
         records.sortBy {it.DateOfBirth}
         return records
     }
 
     override fun sortByLastname(): List<Record> {
-        records.sortBy {it.LastName}
+        records.sortByDescending {it.LastName}
         return records
     }
 }
