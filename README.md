@@ -12,3 +12,12 @@
     - Returning records by gender
     - Returning records by birthdate
     - Returning records by name
+
+### Usage
+- Step 1
+
+  Step 1 can be demonstrated by runnig the following command: 
+  ```
+  java -jar build/libs/record-service.jar <DISPLAY_MODE> records/records-comma.txt records/records-pipe.txt records/records-space.txt
+  ```
+  Replace `<DISPLAY_MODE>` with either `gender`, `birthdate`, or `lastname` to choose the way you would like the records to be displayed. You may also replace any of the files with your own custom input files, provided they are in one of the three given formats (pipe, comma, or space delimited).
