@@ -12,14 +12,22 @@ buildscript {
     dependencies {
         // Retrieves the Kotlin gradle plugin
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        //spring boot
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.6.RELEASE")
     }
 }
+
 // (2)
 apply plugin: 'kotlin'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
 // (3)
 repositories {
     mavenCentral()
 }
+
 // (4)
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
@@ -27,6 +35,10 @@ dependencies {
     //J-Unit 5
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+
+    //Spring
+    compile("org.springframework.boot:spring-boot-starter-web")
+
 
 }
 
