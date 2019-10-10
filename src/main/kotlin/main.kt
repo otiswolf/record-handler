@@ -1,11 +1,20 @@
+import org.springframework.boot.SpringApplication
 import parse.CommaParser
 import parse.PipeParser
 import parse.SpaceParser
-import storage.Record
+import spring.SpringApp
 import storage.RecordStoreImpl
 import java.io.File
 
 fun main(args: Array<String>) {
+    when (args[0]) {
+        "step1" -> step1(args.sliceArray(1..4))
+        "step2" -> step2()
+        else -> println("Please enter a valid step to run")
+    }
+}
+
+fun step1(args: Array<String>) {
 
     //check that display mode is valid
     val displayMode = args[0]
@@ -48,4 +57,8 @@ fun main(args: Array<String>) {
         }
 
     }
+}
+
+fun step2() {
+    SpringApplication.run(SpringApp::class.java)
 }
